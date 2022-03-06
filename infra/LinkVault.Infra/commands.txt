@@ -1,0 +1,6 @@
+dotnet publish LinkVault	--Infra project
+dotnet publish Company.ClientsManager		--app
+cdk deploy --require-aproval never --all
+cdk destroy --all
+
+npm install -g aws-cdk@latest

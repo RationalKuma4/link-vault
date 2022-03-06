@@ -1,0 +1,104 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "link-vault-dev-dynamo": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "link-vault-dev-dynamo.template.json",
+        "tags": {
+          "environment": "dev",
+          "owner": "team@team.com",
+          "service": "link-vault"
+        },
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/link-vault-dev-dynamo": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "environment",
+                "Value": "dev"
+              },
+              {
+                "Key": "owner",
+                "Value": "team@team.com"
+              },
+              {
+                "Key": "service",
+                "Value": "link-vault"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:352:62)",
+              "Object.addStackArtifactToAssembly (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\_shared.js:27:20)",
+              "LegacyStackSynthesizer.emitStackArtifact (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\stack-synthesizer.js:36:19)",
+              "LegacyStackSynthesizer.synthesize (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:118:14)",
+              "C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:155:35",
+              "visit (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "synthesizeTree (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:148:5)",
+              "Object.synthesize (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:33:5)",
+              "App.synth (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\stage.js:89:41)",
+              "C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8228:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8840:24)",
+              "C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8228:107",
+              "Kernel._ensureSync (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8821:28)",
+              "Kernel.invoke (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8228:34)",
+              "KernelHost.processRequest (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9761:36)",
+              "KernelHost.run (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9724:22)",
+              "Immediate._onImmediate (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9725:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/link-vault-dev-dynamo/link-vault-dev-link-vault": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "linkvaultdevlinkvaultB4BD9085"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:352:62)",
+              "new Table (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:505:23)",
+              "C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8412:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8840:24)",
+              "Kernel._create (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8412:34)",
+              "Kernel.create (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8153:29)",
+              "KernelHost.processRequest (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9761:36)",
+              "KernelHost.run (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9724:22)",
+              "Immediate._onImmediate (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9725:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/link-vault-dev-dynamo/link-vault-dev-link-vault/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "linkvaultdevlinkvaultB4BD9085",
+            "trace": [
+              "new Table (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\jsii-kernel-n7wZxf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:477:22)",
+              "C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8412:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8840:24)",
+              "Kernel._create (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8412:34)",
+              "Kernel.create (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:8153:29)",
+              "KernelHost.processRequest (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9761:36)",
+              "KernelHost.run (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9724:22)",
+              "Immediate._onImmediate (C:\\Users\\Anselmo\\AppData\\Local\\Temp\\gnzoijec.aeg\\lib\\program.js:9725:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "link-vault-dev-dynamo"
+    }
+  }
+}

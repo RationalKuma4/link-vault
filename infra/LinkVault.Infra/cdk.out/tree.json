@@ -1,0 +1,84 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.147.0"
+        }
+      },
+      "link-vault-dev-dynamo": {
+        "id": "link-vault-dev-dynamo",
+        "path": "link-vault-dev-dynamo",
+        "children": {
+          "link-vault-dev-link-vault": {
+            "id": "link-vault-dev-link-vault",
+            "path": "link-vault-dev-dynamo/link-vault-dev-link-vault",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "link-vault-dev-dynamo/link-vault-dev-link-vault/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      },
+                      {
+                        "attributeName": "category",
+                        "keyType": "RANGE"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      },
+                      {
+                        "attributeName": "category",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST",
+                    "tableName": "link-vault"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.147.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "link-vault-dev-dynamo/link-vault-dev-link-vault/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.147.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.147.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.147.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.147.0"
+    }
+  }
+}
